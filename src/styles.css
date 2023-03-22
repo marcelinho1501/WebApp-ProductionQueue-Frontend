@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+/* estilo para o container */
+.kanban {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* estilo para as colunas */
+.column {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  margin-left: 10px;
+}
+
+.column h2 {
+  margin: 10px;
+  font-size: 12px;
+}
+
+/* estilo para os cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.card.done {
+  background-color: #00c1fc;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* estilo para as imagens */
+.img-card {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-card img {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.card p {
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+.buttonNavigator {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,16 @@
+<po-container>
+    <po-dynamic-form
+    #dynamicForm
+    p-auto-focus="name"
+    [p-fields]="fields"
+    [p-value]="valueDefault">
+  </po-dynamic-form>
+  <div class="po-row">
+    <po-button 
+      class="po-md-4"
+      p-label="Aplicar filtro"
+      p-icon="po-icon po-icon-search"
+      p-kind="primary"
+      (p-click)="onFilter()">
+    </po-button>
+  </div>

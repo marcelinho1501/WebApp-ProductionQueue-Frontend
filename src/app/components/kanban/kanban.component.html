@@ -1,0 +1,27 @@
+<po-container>
+  <div class="buttonNavigator">
+    <po-button p-label="Anterior" p-kind="tertiary" (p-click)="prevPage()" [p-disabled]="currentPage == 1"></po-button>
+    <po-button p-label="Próximo"  p-kind="tertiary"  (p-click)="nextPage()" [p-disabled]="currentPage == getTotalPages()"></po-button>
+  </div>
+  <div class="kanban">
+    <div class="column" *ngFor="let x of places.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)">
+      <h2>{{x.name}}</h2>
+      <div class="cards">
+        <po-widget class="card done" *ngFor="let y of orders">
+          <div>
+            <div>
+              <p class="font-card">O.P.:{{y.op}} - {{y.produto}}</p>
+              <p class="font-card">Dados: {{y.cor}} - {{y.tamanho}}</p>
+              <p class="font-card">Quantidade: {{y.quantidade}}</p>
+              <p class="font-card">Dt. inicio: {{y.data_inicio}}</p>
+              <p class="font-card">Dt. fin.: {{y.data_fim}}</p>
+            </div>
+            <div class="img-card">
+              <img [src]="y.img" width="70" height="70"/>
+            </div>
+          </div>
+        </po-widget>
+      </div>
+    </div>
+  </div>
+</po-container>
