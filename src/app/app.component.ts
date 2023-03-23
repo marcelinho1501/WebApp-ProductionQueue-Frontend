@@ -15,8 +15,8 @@ export class AppComponent implements OnInit{
       localStorage.removeItem('redirectUrl');
       localStorage.setItem('redirectUrl', window.location.pathname);
       this.router.navigate([window.location.pathname]);
-    }    
+    }
   }
-  
+
   ngOnInit(): void {}
 }

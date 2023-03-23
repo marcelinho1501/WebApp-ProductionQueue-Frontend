@@ -68,7 +68,32 @@
 }
 
 .container-header {
-  margin-top: 40px;
+
   justify-content: flex-start;
-  background-color: #d1dee2;
+  background-color: #f1f1f1;
+  padding: 0.7rem;
+}
+
+.po-navbar {
+  background-color: #0c9abe;
+  color: white;
+  height: 40px;
+}
+
+.po-navbar .po-navbar-item {
+  color: white;
+  font-size: 12px;
+}
+
+.po-navbar .po-icon {
+  color: white;
+  font-size: 20px;
+}
+
+.po-navbar-logo img {
+  width: 25px;
+  max-width: 25px;
+  height: auto;
+  opacity: 0.9;
+  position: static;
 }

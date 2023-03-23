@@ -17,7 +17,7 @@ export class KanbanComponent implements OnInit {
   onResize(event: any) {
     this.updateItemsPerPage();
   }
-  
+
   async ngOnInit() {
     this.updateItemsPerPage();
     this.places = await this.getPlaces();
@@ -28,14 +28,12 @@ export class KanbanComponent implements OnInit {
   updateItemsPerPage() {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    if (viewportWidth <= 768 && viewportHeight <= 600) { // Tamanho de tela de dispositivos móveis ou monitor menor de notebook
+    if (viewportWidth <= 768 || viewportHeight <= 600) { // Tamanho de tela de dispositivos móveis ou monitor menor de notebook
       this.itemsPerPage = 1;
-      this.currentPage = 1;
     } else if (viewportWidth >= 1200 && viewportHeight >= 800) { // Monitor maior externo
       this.currentPage = 1;
       this.itemsPerPage = 8;
     } else {
-      this.currentPage = 1;
       this.itemsPerPage = 4;
     }
   }
@@ -45,7 +43,7 @@ export class KanbanComponent implements OnInit {
       const data = await this.http.get('assets/places.json').toPromise();
       return data;
     } catch (error) {
-      
+
     }
   }
 
@@ -54,7 +52,7 @@ export class KanbanComponent implements OnInit {
       const data = await this.http.get('assets/productionPlaces.json').toPromise();
       return data;
     } catch (error) {
-      
+
     }
   }
 
