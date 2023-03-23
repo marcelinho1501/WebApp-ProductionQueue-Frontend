@@ -19,20 +19,23 @@ export class KanbanComponent implements OnInit {
   }
   
   async ngOnInit() {
+    this.updateItemsPerPage();
     this.places = await this.getPlaces();
     this.orders = await this.getOrders();
-    this.updateItemsPerPage();
+
   }
 
   updateItemsPerPage() {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
-    if (viewportWidth <= 768 || viewportHeight <= 600) { // Tamanho de tela de dispositivos móveis ou monitor menor de notebook
+    if (viewportWidth <= 768 && viewportHeight <= 600) { // Tamanho de tela de dispositivos móveis ou monitor menor de notebook
       this.itemsPerPage = 1;
       this.currentPage = 1;
     } else if (viewportWidth >= 1200 && viewportHeight >= 800) { // Monitor maior externo
+      this.currentPage = 1;
       this.itemsPerPage = 8;
     } else {
+      this.currentPage = 1;
       this.itemsPerPage = 4;
     }
   }
