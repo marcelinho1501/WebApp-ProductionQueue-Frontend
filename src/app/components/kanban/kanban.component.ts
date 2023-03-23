@@ -11,7 +11,7 @@ export class KanbanComponent implements OnInit {
   places: any = [];
   orders: any = [];
   currentPage: number = 1;
-  itemsPerPage: number = 8;
+  itemsPerPage: number = 0;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -21,15 +21,19 @@ export class KanbanComponent implements OnInit {
   async ngOnInit() {
     this.places = await this.getPlaces();
     this.orders = await this.getOrders();
+    this.updateItemsPerPage();
   }
 
   updateItemsPerPage() {
     const viewportWidth = window.innerWidth;
-    if (viewportWidth <= 768) { // Tamanho de tela de dispositivos móveis
+    const viewportHeight = window.innerHeight;
+    if (viewportWidth <= 768 || viewportHeight <= 600) { // Tamanho de tela de dispositivos móveis ou monitor menor de notebook
       this.itemsPerPage = 1;
       this.currentPage = 1;
-    } else {
+    } else if (viewportWidth >= 1200 && viewportHeight >= 800) { // Monitor maior externo
       this.itemsPerPage = 8;
+    } else {
+      this.itemsPerPage = 4;
     }
   }
 

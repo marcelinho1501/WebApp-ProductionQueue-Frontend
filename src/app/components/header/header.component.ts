@@ -9,8 +9,8 @@ import { PoNavbarIconAction, PoNavbarItem } from '@po-ui/ng-components';
 export class HeaderComponent {
   itemsNavBar: Array<PoNavbarItem> = [
     {
-      label: 'teste',
-      link: '/teste'
+      label: 'Ajuda',
+      link: '/about'
     }];
     
   iconsActions: Array<PoNavbarIconAction> = [
