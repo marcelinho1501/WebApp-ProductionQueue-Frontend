@@ -1,52 +1,27 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { PoDynamicFormField } from '@po-ui/ng-components';
-
+import { FilterService } from './filter.component.service';
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
-  valueDefault = {};
   @Output() filterClick = new EventEmitter();
-  
-  constructor() {}
+  constructor(private service: FilterService) {}
 
-  fields: Array<PoDynamicFormField> = [
-    {
-      property: 'placeList',
-      gridColumns: 6,
-      gridSmColumns: 12,
-      label: 'Local',
-      searchService: 'https://po-sample-api.fly.dev/v1/heroes',
-      format: ['id', 'nickname'],
-      fieldLabel: 'nickname',
-      fieldValue: 'email'
-    },
-    {
-      property: 'apresentation',
-      gridColumns: 6,
-      gridSmColumns: 12,
-      label: 'Tipo de visualização',
-      fieldValue: 'code',
-      fieldLabel: 'label',
-      options: [
-        { label: 'Local', code: '1' },
-        { label: 'Programada', code: '2' },
-        { label: 'Programada + Local', code: '3' },
-        { label: '', code: 'NSW' }
-      ],
-      optionsMulti: false
-    },
-  ];
+  loading: boolean = false;
+  heroes: Array<any> = [];
+  multiLookup: Array<any> = [1495831666871, 1405833068599];
+
+  async changeOptions(event: any) {
+    this.loading = true;
+   // this.heroes = await this.service.getHeroes(event).toPromise();
+  }
+
   ngOnInit() {
-    this.valueDefault = {
-      apresentation: ['3'],
-    };
   }
 
   onFilter() {
     this.filterClick.emit();
   }
-
 }

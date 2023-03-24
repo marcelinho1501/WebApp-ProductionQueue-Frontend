@@ -1,10 +1,20 @@
 <div class="container-header">
-    <po-dynamic-form
-    #dynamicForm
-    p-auto-focus="name"
-    [p-fields]="fields"
-    [p-value]="valueDefault">
-  </po-dynamic-form>
+  <po-lookup
+  class="po-md-6"
+  name="lookup"
+  p-field-label="label"
+  p-field-value="value"
+  p-filter-service="https://po-sample-api.fly.dev/v1/heroes"
+  p-label="Local"
+  [p-multiple]="true"
+  (p-change)="changeOptions($event)"
+></po-lookup>
+
+<po-select class="po-md-6"
+  name="select"
+  p-label="Tipo de visualização"
+  [p-options]="[{ label: 'Local', value: '1' }, { label: 'Programada', value: '2' }, { label: 'Programada + Local', value: '3' },]">
+</po-select>
   <div class="po-row">
     <po-button
       class="po-md-4"

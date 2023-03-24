@@ -1,82 +1,42 @@
 [
   {
     "op": "001",
-    "produto": "Camiseta",
-    "cor": "Azul",
-    "tamanho": "M",
-    "quantidade": 1000,
-	"data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-	  "img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "002",
-    "produto": "Calça Jeans",
-    "cor": "Preto",
-	"tamanho": "P",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-  	"img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022 Tamanho: M", "Grupo: PA CALCA 3 - M - laranja", "DT. Inicio: 15/11/2022 - Dt. Fim: 25/12/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "003",
-    "produto": "Vestido",
-    "cor": "Vermelho",
-	"tamanho": "P",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-  	"img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022 - CALCA TESTE"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "004",
-    "produto": "Saia",
-    "cor": "Azul",
-    "tamanho": "G",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-	  "img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022", "Grupo: PA CALCA 3 - M - laranja", "DT. Inicio: 15/11/2022 - Dt. Fim: 25/12/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "005",
-    "produto": "Conjunto",
-    "cor": "Preto e branco",
-    "tamanho": "P",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-	  "img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022", "Grupo: PA CALCA 3 - M - laranja", "DT. Inicio: 15/11/2022 - Dt. Fim: 25/12/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "006",
-    "produto": "Vestido",
-    "cor": "Vermelho",
-    "tamanho": "G",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-	  "img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022", "Grupo: PA CALCA 3 - M - laranja", "DT. Inicio: 15/11/2022 - Dt. Fim: 25/12/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "007",
-    "produto": "Tenis Nike",
-    "cor": "Vermelho",
-    "tamanho": "G",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-	  "img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022", "Grupo: PA CALCA 3 - M - laranja", "DT. Inicio: 15/11/2022 - Dt. Fim: 25/12/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   },
   {
     "op": "008",
-    "produto": "Vestido",
-    "cor": "Vermelho",
-    "tamanho": "G",
-    "quantidade": 200,
-    "data_inicio": "2022-03-01",
-    "data_fim": "2022-03-31",
-	  "img": "https://picsum.photos/200/300/?random"
+	"lines": ["OP: 03/15/2022", "Grupo: PA CALCA 3 - M - laranja", "DT. Inicio: 15/11/2022 - Dt. Fim: 25/12/2022"],
+	"img": "https://picsum.photos/200/300/?random"
   }
 ]

@@ -1,4 +1,15 @@
 /* estilo para o container */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #17a0c2;
+}
+
+.welcome {
+  flex-grow: 1;
+}
+
 .kanban {
   display: flex;
   flex-wrap: wrap;
@@ -22,22 +33,19 @@
 
 /* estilo para os cards */
 .cards {
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
+  margin: 10px;
+  gap: 10px; /* define o espaçamento vertical entre os cards */
 }
 
 .card {
   width: 100%;
   max-width: 300px;
-  margin: 10px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-}
-
-.card.done {
-  background-color: #00c1fc;
 }
 
 .card:hover {
@@ -68,11 +76,15 @@
 }
 
 .container-header {
-
   justify-content: flex-start;
   background-color: #f1f1f1;
   padding: 0.7rem;
 }
+
+.container-header .po-button {
+  background-color: #0c9abe;
+}
+
 
 .po-navbar {
   background-color: #0c9abe;

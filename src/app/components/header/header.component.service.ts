@@ -33,7 +33,7 @@ export class HeaderService {
     {
       label: 'login',
       tooltip: 'Sair',
-      icon: 'po-icon po-icon-exit'
+      icon: 'po-icon po-icon-exit',
   }];
     return iconsBarNav;
   }

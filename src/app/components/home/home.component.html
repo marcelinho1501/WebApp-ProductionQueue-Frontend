@@ -1,8 +1,13 @@
 <app-header (filterClick)="toggleFilter()"></app-header>
 <po-divider></po-divider>
 <app-filter *ngIf="showFilter" (filterClick)="filterChange($event)"></app-filter>
-<div class="welcome">
-  <po-page-default p-title="Fila de ordem de produção">
-    <app-kanban *ngIf="inFilter"></app-kanban>
-  </po-page-default>
+<div class="wrapper">
+  <div class="po-lg-8">
+  <hr>
+    <p class="po-font-title" style="color: white;">Quadro de Produção</p>
+  </div>
+  <div class="welcome">
+      <app-kanban *ngIf="inFilter"></app-kanban>
+  </div>
 </div>
+

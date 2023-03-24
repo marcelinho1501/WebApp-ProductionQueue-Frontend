@@ -4,23 +4,17 @@
     <po-button p-label="Próximo"  p-kind="tertiary"  (p-click)="nextPage()" [p-disabled]="currentPage == getTotalPages()"></po-button>
   </div>
   <div class="kanban">
-    <div class="column" *ngFor="let x of places.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)">
-      <h2>{{x.name}}</h2>
-      <div class="cards">
-        <po-widget class="card done" *ngFor="let y of orders">
-          <div>
-            <div>
-       <p class="font-card">O.P.:{{y.op}} - {{y.produto}}</p>
-            <p class="font-card">Dados: {{y.cor}} - {{y.tamanho}}</p>
-              <p class="font-card">Quantidade: {{y.quantidade}}</p>
-              <p class="font-card">Dt. inicio: {{y.data_inicio}}</p>
-              <p class="font-card">Dt. fin.: {{y.data_fim}}</p>
+    <div class="column" *ngFor="let x of places.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)" [style.background-color]="getRandomColor()">
+      <h2 [style.color]="getTextColor(getRandomColor())">{{x.name}}</h2>
+      <div class="cards" *ngFor="let y of orders">
+          <po-widget class="card">
+            <div class="linesCard" *ngFor="let lineItem of y.lines">
+               <p class="font-card">{{lineItem}} <br></p>
             </div>
             <div class="img-card">
               <img [src]="y.img" width="70" height="70"/>
             </div>
-          </div>
-        </po-widget>
+          </po-widget>
       </div>
     </div>
   </div>

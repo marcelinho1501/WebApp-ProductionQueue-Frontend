@@ -1,0 +1,82 @@
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  color: #444;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+}
+
+.about-header img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.about-header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.about-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.about-section {
+  flex-basis: 30%;
+  margin-bottom: 40px;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  color: white;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  color: white;
+}
+
+.about-section ul {
+  padding: 0;
+  margin: 0;
+}
+
+.about-section li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.about-section li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.about-section li span {
+  font-size: 18px;
+}
+
+.about-container {
+  /* outras propriedades */
+ background-image: url('https://st2.depositphotos.com/7267242/11486/i/450/depositphotos_114864320-stock-photo-dark-blue-background-from-a.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 255, 0.5);
+}

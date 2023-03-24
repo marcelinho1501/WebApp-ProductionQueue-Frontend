@@ -22,7 +22,6 @@ export class KanbanComponent implements OnInit {
     this.updateItemsPerPage();
     this.places = await this.getPlaces();
     this.orders = await this.getOrders();
-
   }
 
   updateItemsPerPage() {
@@ -32,9 +31,9 @@ export class KanbanComponent implements OnInit {
       this.itemsPerPage = 1;
     } else if (viewportWidth >= 1200 && viewportHeight >= 800) { // Monitor maior externo
       this.currentPage = 1;
-      this.itemsPerPage = 8;
+      this.itemsPerPage = 5;
     } else {
-      this.itemsPerPage = 4;
+      this.itemsPerPage = 3;
     }
   }
 
@@ -50,6 +49,7 @@ export class KanbanComponent implements OnInit {
   async getOrders(): Promise<any> {
     try {
       const data = await this.http.get('assets/productionPlaces.json').toPromise();
+      console.log(data);
       return data;
     } catch (error) {
 
@@ -70,5 +70,23 @@ export class KanbanComponent implements OnInit {
 
   getTotalPages() {
     return Math.ceil(this.places.length / this.itemsPerPage);
+  }
+
+  getRandomColor(): string {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  getTextColor(backgroundColor: string): string {
+    const hex = backgroundColor.replace("#", "");
+    const r = parseInt(hex.substr(0, 2), 16);
+    const g = parseInt(hex.substr(2, 2), 16);
+    const b = parseInt(hex.substr(4, 2), 16);
+    const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    return (brightness > 128) ? '#000000' : '#FFFFFF';
   }
 }
